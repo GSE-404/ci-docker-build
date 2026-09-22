@@ -12,11 +12,11 @@ steps:
 - name: Checkout Code
 uses: actions/checkout@v4 
 
- - name: Log in to DockerHub
-   uses: docker/login-action@v3 
-   with: 
-     username: ${{ secrets.DOCKERHUB_USERNAME }} 
-     password: ${{ secrets.DOCKERHUB_TOKEN }} 
+  - name: Log in to DockerHub
+    uses: docker/login-action@v3 
+    with: 
+      username: ${{ secrets.DOCKERHUB_USERNAME }} 
+      password: ${{ secrets.DOCKERHUB_TOKEN }} 
  - name: Build and Push Docker Image 
    uses: docker/build-push-action@v5 
    with: 
